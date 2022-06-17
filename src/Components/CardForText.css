@@ -1,0 +1,21 @@
+.text-main{
+    width: 400px;
+    margin-top: 15px;
+    border-radius: 15px;
+    background-color: aliceblue;
+}
+
+.user{
+    width: 100%;
+    height: 30px;
+    background-color: rgb(205, 198, 198);
+    /* border-radius: 10px 10px 0px 0px; */
+}
+
+h3{
+    padding-left: 20px;
+}
+
+p{
+    padding-left: 20px;
+}
