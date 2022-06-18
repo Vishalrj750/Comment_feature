@@ -20,9 +20,23 @@ export const InputText = () => {
         }
         // const arr = [...items, payLoad]
         setItems([...items, payLoad])
+        setInput("")
     }
 
     const handleGif = async () => {
+        if(input.length){
+            const response = await giphy.search( input, { offset: 5, limit: 24 })
+            const searchData = response.data
+            const allSearchData = searchData.map((item) => {
+                return {
+                    url: item.images.downsized.url,
+                    id: item.id
+                }
+            })
+            setGifs(allSearchData)
+            setInput("")
+            return
+        }
         const res = await giphy.trending({ offset: 5, limit: 24 })
         const myData = res.data
         const allData = myData.map((item) => {
@@ -32,7 +46,6 @@ export const InputText = () => {
             }
         })
         setGifs(allData)
-        console.log(gifs)
         // const payLoad = {
         //     url: res.data.images.downsized.url,
         //     id: res.data.id
