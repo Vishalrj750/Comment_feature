@@ -22,3 +22,12 @@ img{
     width: 100%;
     object-fit: contain;
 }
+
+@media only screen and (max-width: 450px){
+    .gif-main{
+        width: 300px;
+        margin-top: 15px;
+        border-radius: 15px;
+        background-color: white;
+    }
+}

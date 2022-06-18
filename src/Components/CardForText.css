@@ -19,3 +19,12 @@ h3{
 p{
     padding-left: 20px;
 }
+
+@media only screen and (max-width: 450px){
+    .text-main{
+        width: 300px;
+        margin-top: 15px;
+        border-radius: 15px;
+        background-color: white;
+    }
+}
